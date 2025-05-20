@@ -1,32 +1,50 @@
-"use client";
+'use client';
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
-export default function Navbar() {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
-
-  // Toggle the theme class on the <html> element
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", theme === "dark");
-  }, [theme]);
+const Navbar = () => {
+  const pathname = usePathname();
 
   return (
-    <nav className="flex justify-between items-center p-4 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-black">
-      <Link href="/">
-        <span className="text-xl font-bold text-black dark:text-white">Kabir Sethi</span>
-      </Link>
-      <div className="flex items-center gap-6">
-        <Link href="/about" className="text-gray-700 dark:text-gray-300 hover:text-blue-500">About</Link>
-        <Link href="/projects" className="text-gray-700 dark:text-gray-300 hover:text-blue-500">Projects</Link>
-        <Link href="/contact" className="text-gray-700 dark:text-gray-300 hover:text-blue-500">Contact</Link>
-        <button
-          onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-          className="ml-4 px-3 py-1 border rounded text-sm text-gray-800 dark:text-gray-200 border-gray-300 dark:border-gray-600"
+    <header className="w-full px-8 py-4 flex justify-between items-center border-b border-gray-700 bg-black">
+      <h1 className="text-xl font-bold text-white">Kabir Sethi</h1>
+      <nav className="flex gap-6 text-white text-sm font-medium">
+        <Link
+          href="/"
+          className={`hover:text-yellow-400 transition ${
+            pathname === '/' ? 'text-yellow-400' : ''
+          }`}
         >
-          {theme === "light" ? "Dark Mode" : "Light Mode"}
-        </button>
-      </div>
-    </nav>
+          Home
+        </Link>
+        <Link
+          href="/about"
+          className={`hover:text-yellow-400 transition ${
+            pathname === '/about' ? 'text-yellow-400' : ''
+          }`}
+        >
+          About
+        </Link>
+        <Link
+          href="/projects"
+          className={`hover:text-yellow-400 transition ${
+            pathname === '/projects' ? 'text-yellow-400' : ''
+          }`}
+        >
+          Projects
+        </Link>
+        <Link
+          href="/contact"
+          className={`hover:text-yellow-400 transition ${
+            pathname === '/contact' ? 'text-yellow-400' : ''
+          }`}
+        >
+          Contact
+        </Link>
+      </nav>
+    </header>
   );
-}
+};
+
+export default Navbar;

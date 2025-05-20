@@ -1,6 +1,6 @@
 export default function AboutPage() {
   return (
-    <main className="px-6 py-16 max-w-4xl mx-auto text-gray-800 dark:text-gray-200">
+    <main className="px-6 py-16 max-w-3xl mx-auto text-gray-800 dark:text-gray-200 leading-relaxed space-y-6">
       <h1 className="text-4xl font-bold mb-6">About Me</h1>
       <p className="mb-4">
         Hey! I'm Kabir, a software developer with a background in computer science and business. I love building intuitive,
