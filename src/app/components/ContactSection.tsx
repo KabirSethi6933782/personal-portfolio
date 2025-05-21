@@ -7,21 +7,21 @@ const contacts = [
     label: "Email",
     icon: <FaEnvelope />,
     href: "mailto:kabirsethi2002@gmail.com",
-    classes: "bg-blue-700 hover:bg-blue-800",
+    classes: "bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700",
     display: "kabirsethi2002@gmail.com",
   },
   {
     label: "LinkedIn",
     icon: <FaLinkedin />,
     href: "https://www.linkedin.com/in/kabir-sethi-826116197/",
-    classes: "bg-blue-700 hover:bg-blue-800",
+    classes: "bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700",
     display: "LinkedIn",
   },
   {
     label: "GitHub",
     icon: <FaGithub />,
     href: "https://github.com/KabirSethi6933782",
-    classes: "bg-gray-800 hover:bg-gray-900",
+    classes: "bg-gray-800 hover:bg-gray-900 dark:bg-neutral-700 dark:hover:bg-neutral-600",
     display: "GitHub",
   },
 ];
@@ -33,7 +33,7 @@ export default function ContactSection() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.8, type: "spring" }}
-      className="max-w-2xl mx-auto px-6 py-20 text-center"
+      className="max-w-2xl mx-auto px-6 py-20 text-center bg-white/80 dark:bg-black/60 rounded-2xl shadow-lg backdrop-blur-sm"
     >
       {/* Animated Header with Underline */}
       <motion.h2
@@ -41,7 +41,7 @@ export default function ContactSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7, type: "spring" }}
-        className="text-3xl md:text-4xl font-bold text-white mb-4 text-center"
+        className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 text-center"
       >
         Let’s Connect
         <motion.div
@@ -52,7 +52,7 @@ export default function ContactSection() {
           className="mx-auto mt-2 h-1 w-16 bg-blue-400 origin-left rounded"
         />
       </motion.h2>
-      <p className="text-lg text-gray-300 mb-8">
+      <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
         Whether you want to discuss a new project, collaborate, or just chat about tech—my inbox is always open.<br /><br />
         Drop me a message and I’ll get back to you soon!
       </p>

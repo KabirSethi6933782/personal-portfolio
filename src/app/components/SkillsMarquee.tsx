@@ -1,4 +1,5 @@
 "use client";
+
 import Marquee from "react-fast-marquee";
 import { FaReact, FaNodeJs, FaPython, FaJs, FaHtml5, FaCss3Alt, FaGitAlt, FaFigma, FaJava } from "react-icons/fa";
 
@@ -12,13 +13,15 @@ const skills = [
   { name: "Git", icon: <FaGitAlt size={40} color="#f14e32" /> },
   { name: "Figma", icon: <FaFigma size={40} color="#A259FF" /> },
   { name: "Java", icon: <FaJava size={40} color="#007396" /> },
-  // Add more as you like!
 ];
 
 export default function SkillsMarquee() {
   return (
     <div className="py-12">
-      <h3 className="text-2xl font-bold mb-6 text-center text-white">Tech Stack</h3>
+      {/* Tech Stack Heading */}
+      <h3 className="text-2xl font-bold mb-6 text-center text-gray-900 dark:text-white">Skills</h3>
+
+      {/* Marquee */}
       <Marquee gradient={false} speed={40}>
         {skills.map((skill, idx) => (
           <div
@@ -26,7 +29,7 @@ export default function SkillsMarquee() {
             className="flex flex-col items-center mx-10 min-w-[100px] opacity-80 hover:opacity-100 transition"
           >
             {skill.icon}
-            <span className="mt-2 text-gray-200 text-lg">{skill.name}</span>
+            <span className="mt-2 text-gray-700 dark:text-gray-300 text-lg">{skill.name}</span>
           </div>
         ))}
       </Marquee>

@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import Image from "next/image";
 
-// If you have real screenshots, put them in /public/projects and update the 'image' field below
 const projects = [
   {
     title: "AI-Powered Newsletter Generator",
@@ -13,7 +12,7 @@ const projects = [
     tech: ["Python", "Django", "React", "OpenAI", "PostgreSQL"],
     github: "https://github.com/iaminhri/COSC-4P02",
     demo: "",
-    image: "/projects/newsletter.png", // Replace with your screenshot or a placeholder
+    image: "/projects/newsletter.png",
   },
   {
     title: "Ventii – Mental Health Startup",
@@ -23,17 +22,17 @@ const projects = [
     tech: ["Next.js", "Tailwind", "Vercel", "OpenAI"],
     github: "",
     demo: "https://ventii.co",
-    image: "/projects/ventii.png", // Replace with your screenshot or a placeholder
+    image: "/projects/ventii.png",
   },
   {
     title: "Second Chance Decor E-Commerce",
     tagline: "Online store for upcycled furniture.",
     description:
       "Designed and built an accessible, responsive e-commerce site for Second Chance Decor as part of my CiviConnect team. Focused on seamless shopping and donation experience.",
-    tech: ["React", "Node.js","SQL", "Figma"],
+    tech: ["React", "Node.js", "SQL", "Figma"],
     github: "",
     demo: "https://www.secondchancedecor.ca",
-    image: "/projects/secondchance.png", // Replace with your screenshot or a placeholder
+    image: "/projects/secondchance.png",
   },
 ];
 
@@ -66,7 +65,7 @@ export default function ProjectsSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7, type: "spring" }}
-        className="text-3xl md:text-4xl font-bold text-white mb-4 text-center"
+        className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 text-center"
       >
         Projects
         <motion.div
@@ -83,29 +82,29 @@ export default function ProjectsSection() {
             key={project.title}
             variants={card}
             transition={{ duration: 0.7, type: "spring" }}
-            className="bg-black/70 rounded-2xl shadow-xl p-6 md:p-8 border border-gray-700 hover:border-blue-600 transition group flex flex-col"
+            className="bg-white/90 dark:bg-black/70 rounded-2xl shadow-xl p-6 md:p-8 border border-gray-300 dark:border-gray-700 hover:border-blue-600 transition group flex flex-col"
           >
             {/* Project Image */}
-        <div className="w-full h-48 mb-4 rounded-xl overflow-hidden bg-neutral-900 flex items-center justify-center">
-            <Image
-            src={project.image}
-            alt={project.title}
-            width={320}
-            height={192}
-            className="object-cover w-full h-full"
-          />
-        </div>
+            <div className="w-full h-48 mb-4 rounded-xl overflow-hidden bg-neutral-200 dark:bg-neutral-900 flex items-center justify-center">
+              <Image
+                src={project.image}
+                alt={project.title}
+                width={320}
+                height={192}
+                className="object-cover w-full h-full"
+              />
+            </div>
             {/* Project Info */}
-            <h3 className="text-2xl font-semibold text-white mb-1 group-hover:text-blue-400 transition">
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-1 group-hover:text-blue-400 transition">
               {project.title}
             </h3>
-            <p className="text-blue-300 text-base mb-2 italic">{project.tagline}</p>
-            <p className="text-gray-300 mb-4 text-[1rem]">{project.description}</p>
+            <p className="text-blue-700 dark:text-blue-300 text-base mb-2 italic">{project.tagline}</p>
+            <p className="text-gray-700 dark:text-gray-300 mb-4 text-[1rem]">{project.description}</p>
             <div className="flex flex-wrap gap-3 mb-4">
               {project.tech.map((t) => (
                 <span
                   key={t}
-                  className="text-xs px-3 py-1 bg-blue-700 text-white rounded-lg tracking-wide font-medium"
+                  className="text-xs px-3 py-1 bg-blue-700 dark:bg-blue-600 text-white rounded-lg tracking-wide font-medium"
                 >
                   {t}
                 </span>
@@ -117,7 +116,7 @@ export default function ProjectsSection() {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition text-xl"
+                  className="text-gray-400 hover:text-gray-900 dark:hover:text-white transition text-xl"
                   aria-label="GitHub Repository"
                 >
                   <FaGithub />
@@ -128,7 +127,7 @@ export default function ProjectsSection() {
                   href={project.demo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition text-xl"
+                  className="text-gray-400 hover:text-blue-700 dark:hover:text-blue-300 transition text-xl"
                   aria-label="Live Demo"
                 >
                   <FaExternalLinkAlt />
