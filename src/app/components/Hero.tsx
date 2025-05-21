@@ -54,7 +54,7 @@ export default function Hero() {
         </p>
 
         {/* Animated Button */}
-        <Link href="/projects" className="inline-block">
+        <Link href="#projects" className="inline-block">
           <motion.button
             whileHover={{ scale: 1.08, boxShadow: "0 0 24px #2563eb88" }}
             whileTap={{ scale: 0.96 }}
@@ -67,7 +67,7 @@ export default function Hero() {
         {/* Social Links (optional) */}
         <div className="flex gap-6 mt-8 justify-center md:justify-start">
           <a
-            href="https://github.com/yourgithub"
+            href="https://github.com/KabirSethi6933782"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
@@ -76,7 +76,7 @@ export default function Hero() {
             <FaGithub />
           </a>
           <a
-            href="https://linkedin.com/in/yourlinkedin"
+            href="https://www.linkedin.com/in/kabir-sethi-826116197/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
@@ -85,7 +85,7 @@ export default function Hero() {
             <FaLinkedin />
           </a>
           <a
-            href="mailto:kabirsethi2002@gmail.com.com"
+            href="mailto:kabirsethi2002@gmail.com"
             aria-label="Email"
             className="text-gray-300 hover:text-white transition text-2xl"
           >

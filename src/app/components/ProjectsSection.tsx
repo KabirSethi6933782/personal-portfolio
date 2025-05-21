@@ -1,13 +1,47 @@
 "use client";
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import Image from "next/image";
 
-// --- Animation variants for the parent and cards ---
+// If you have real screenshots, put them in /public/projects and update the 'image' field below
+const projects = [
+  {
+    title: "AI-Powered Newsletter Generator",
+    tagline: "Personalized newsletters with AI, made easy.",
+    description:
+      "Developed a user-friendly website with user profiles and dashboards. Users can input news/social sources, topics, keywords, locations, or industries to generate personalized newsletters and social media content using advanced AI techniques like Natural Language Processing (NLP).",
+    tech: ["Python", "Django", "React", "OpenAI", "PostgreSQL"],
+    github: "https://github.com/iaminhri/COSC-4P02",
+    demo: "",
+    image: "/projects/newsletter.png", // Replace with your screenshot or a placeholder
+  },
+  {
+    title: "Ventii – Mental Health Startup",
+    tagline: "Digital solutions to support mental wellness.",
+    description:
+      "Designed and developed the official website for Ventii, a mental health startup, with a modern UI, clear brand identity, and focus on engagement and accessibility.",
+    tech: ["Next.js", "Tailwind", "Vercel", "OpenAI"],
+    github: "",
+    demo: "https://ventii.co",
+    image: "/projects/ventii.png", // Replace with your screenshot or a placeholder
+  },
+  {
+    title: "Second Chance Decor E-Commerce",
+    tagline: "Online store for upcycled furniture.",
+    description:
+      "Designed and built an accessible, responsive e-commerce site for Second Chance Decor as part of my CiviConnect team. Focused on seamless shopping and donation experience.",
+    tech: ["React", "Shopify", "Node.js","SQL"],
+    github: "",
+    demo: "https://www.secondchancedecor.ca",
+    image: "/projects/secondchance.png", // Replace with your screenshot or a placeholder
+  },
+];
+
 const container = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.15,
+      staggerChildren: 0.18,
     },
   },
 };
@@ -16,24 +50,6 @@ const card = {
   hidden: { opacity: 0, y: 32, scale: 0.96 },
   visible: { opacity: 1, y: 0, scale: 1 },
 };
-
-const projects = [
-  {
-    title: "Smart Home Automation",
-    description: "IoT project for remote home monitoring and device control. Built with React, Node.js, and Azure IoT.",
-    github: "https://github.com/yourusername/smart-home-automation",
-    demo: "",
-    tech: ["React", "Node.js", "Azure"],
-  },
-  {
-    title: "Portfolio Website",
-    description: "This portfolio site! Made with Next.js, Tailwind, and framer-motion for beautiful, responsive design.",
-    github: "https://github.com/yourusername/personal-portfolio",
-    demo: "",
-    tech: ["Next.js", "Tailwind", "Framer Motion"],
-  },
-  // Add more projects here...
-];
 
 export default function ProjectsSection() {
   return (
@@ -53,12 +69,24 @@ export default function ProjectsSection() {
             key={project.title}
             variants={card}
             transition={{ duration: 0.7, type: "spring" }}
-            className="bg-black/70 rounded-2xl shadow-xl p-8 border border-gray-700 hover:border-blue-600 transition group"
+            className="bg-black/70 rounded-2xl shadow-xl p-6 md:p-8 border border-gray-700 hover:border-blue-600 transition group flex flex-col"
           >
-            <h3 className="text-2xl font-semibold text-white mb-2 group-hover:text-blue-400 transition">
+            {/* Project Image */}
+        <div className="w-full h-48 mb-4 rounded-xl overflow-hidden bg-neutral-900 flex items-center justify-center">
+            <Image
+            src={project.image}
+            alt={project.title}
+            width={320}
+            height={192}
+            className="object-cover w-full h-full"
+          />
+        </div>
+            {/* Project Info */}
+            <h3 className="text-2xl font-semibold text-white mb-1 group-hover:text-blue-400 transition">
               {project.title}
             </h3>
-            <p className="text-gray-300 mb-4">{project.description}</p>
+            <p className="text-blue-300 text-base mb-2 italic">{project.tagline}</p>
+            <p className="text-gray-300 mb-4 text-[1rem]">{project.description}</p>
             <div className="flex flex-wrap gap-3 mb-4">
               {project.tech.map((t) => (
                 <span
@@ -69,7 +97,7 @@ export default function ProjectsSection() {
                 </span>
               ))}
             </div>
-            <div className="flex gap-4">
+            <div className="flex gap-4 mt-auto">
               {project.github && (
                 <a
                   href={project.github}
