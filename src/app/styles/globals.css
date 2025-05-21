@@ -44,3 +44,12 @@ a {
     color-scheme: dark;
   }
 }
+
+body {
+  background: linear-gradient(120deg, #1e293b 0%, #0f172a 50%, #3b0764 100%);
+  min-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}

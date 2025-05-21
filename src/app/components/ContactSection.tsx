@@ -6,7 +6,7 @@ const contacts = [
   {
     label: "Email",
     icon: <FaEnvelope />,
-    href: "mailto:kkabirsethi2002@gmai.com",
+    href: "mailto:kabirsethi2002@gmail.com",
     classes: "bg-blue-700 hover:bg-blue-800",
     display: "kabirsethi2002@gmail.com",
   },
@@ -35,9 +35,26 @@ export default function ContactSection() {
       transition={{ duration: 0.8, type: "spring" }}
       className="max-w-2xl mx-auto px-6 py-20 text-center"
     >
-      <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Contact</h2>
+      {/* Animated Header with Underline */}
+      <motion.h2
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, type: "spring" }}
+        className="text-3xl md:text-4xl font-bold text-white mb-4 text-center"
+      >
+        Let’s Connect
+        <motion.div
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5, duration: 0.4 }}
+          className="mx-auto mt-2 h-1 w-16 bg-blue-400 origin-left rounded"
+        />
+      </motion.h2>
       <p className="text-lg text-gray-300 mb-8">
-        Let’s work together! You can reach me anytime:
+        Whether you want to discuss a new project, collaborate, or just chat about tech—my inbox is always open.<br /><br />
+        Drop me a message and I’ll get back to you soon!
       </p>
       <motion.div
         initial="hidden"
@@ -49,7 +66,7 @@ export default function ContactSection() {
         }}
         className="flex flex-col items-center gap-6"
       >
-        {contacts.map((contact, idx) => (
+        {contacts.map((contact) => (
           <motion.a
             key={contact.label}
             href={contact.href}
@@ -61,6 +78,10 @@ export default function ContactSection() {
               visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.7, type: "spring" }}
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0 2px 24px 0 #38bdf8bb"
+            }}
             className={`flex items-center gap-2 px-6 py-3 text-white rounded-lg font-semibold shadow transition text-lg ${contact.classes}`}
           >
             {contact.icon} {contact.display}

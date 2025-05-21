@@ -30,7 +30,7 @@ const projects = [
     tagline: "Online store for upcycled furniture.",
     description:
       "Designed and built an accessible, responsive e-commerce site for Second Chance Decor as part of my CiviConnect team. Focused on seamless shopping and donation experience.",
-    tech: ["React", "Shopify", "Node.js","SQL"],
+    tech: ["React", "Node.js","SQL", "Figma"],
     github: "",
     demo: "https://www.secondchancedecor.ca",
     image: "/projects/secondchance.png", // Replace with your screenshot or a placeholder
@@ -60,9 +60,23 @@ export default function ProjectsSection() {
       variants={container}
       className="max-w-5xl mx-auto px-6 py-20"
     >
-      <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
+      {/* Animated Header with Underline */}
+      <motion.h2
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, type: "spring" }}
+        className="text-3xl md:text-4xl font-bold text-white mb-4 text-center"
+      >
         Projects
-      </h2>
+        <motion.div
+          initial={{ scaleX: 0 }}
+          whileInView={{ scaleX: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5, duration: 0.4 }}
+          className="mx-auto mt-2 h-1 w-16 bg-blue-400 origin-left rounded"
+        />
+      </motion.h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map((project) => (
           <motion.div

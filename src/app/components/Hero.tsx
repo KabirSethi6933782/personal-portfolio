@@ -4,14 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa"; // Example icons
+import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from "react-icons/fa";
 
 export default function Hero() {
   return (
     <section className="relative flex flex-col md:flex-row items-center justify-between gap-12 px-8 py-20 max-w-6xl mx-auto">
-      {/* Gradient Background Shape */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-black to-gray-900 opacity-80 -z-10 rounded-2xl pointer-events-none" />
-
       {/* Animated Avatar with Glow */}
       <motion.div
         initial={{ opacity: 0, x: -60 }}
@@ -53,18 +50,28 @@ export default function Hero() {
           I’m a software developer with a passion for building smart, elegant, and efficient solutions.
         </p>
 
-        {/* Animated Button */}
-        <Link href="#projects" className="inline-block">
-          <motion.button
-            whileHover={{ scale: 1.08, boxShadow: "0 0 24px #2563eb88" }}
-            whileTap={{ scale: 0.96 }}
-            className="mt-8 px-7 py-3 bg-blue-600 text-white rounded-xl font-semibold shadow-lg hover:bg-blue-700 transition-all text-lg"
+        {/* Action Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center md:justify-start">
+          <Link href="#projects" className="inline-block">
+            <motion.button
+              whileHover={{ scale: 1.08, boxShadow: "0 0 24px #2563eb88" }}
+              whileTap={{ scale: 0.96 }}
+              className="px-7 py-3 bg-blue-600 text-white rounded-xl font-semibold shadow-lg hover:bg-blue-700 transition-all text-lg"
+            >
+              View My Work
+            </motion.button>
+          </Link>
+          <a
+            href="/KabirSethi_Resume.pdf"
+            download
+            className="flex items-center gap-2 px-7 py-3 bg-neutral-800 text-white rounded-xl font-semibold shadow-lg hover:bg-neutral-900 transition-all text-lg"
           >
-            View My Work
-          </motion.button>
-        </Link>
+            <FaDownload className="text-lg" />
+            Resume
+          </a>
+        </div>
 
-        {/* Social Links (optional) */}
+        {/* Social Links */}
         <div className="flex gap-6 mt-8 justify-center md:justify-start">
           <a
             href="https://github.com/KabirSethi6933782"

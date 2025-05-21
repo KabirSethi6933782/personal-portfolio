@@ -12,9 +12,21 @@ export default function Home() {
       <section id="about">
         <AboutSection />
       </section>
+      <div className="w-full overflow-hidden">
+  <svg viewBox="0 0 500 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-12">
+    <path d="M0 20C80 60 160 0 250 20C340 40 420 0 500 20V40H0V20Z" fill="#0ea5e9" fillOpacity="0.08"/>
+  </svg>
+</div>
+
       <section id="projects">
         <ProjectsSection />
       </section>
+      <div className="w-full overflow-hidden">
+  <svg viewBox="0 0 500 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-12">
+    <path d="M0 20C80 60 160 0 250 20C340 40 420 0 500 20V40H0V20Z" fill="#0ea5e9" fillOpacity="0.08"/>
+  </svg>
+</div>
+
       <section id="contact">
         <ContactSection />
       </section>
