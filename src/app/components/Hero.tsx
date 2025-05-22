@@ -50,18 +50,19 @@ export default function Hero() {
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 mt-8 justify-center md:justify-start">
-            {/* Primary Button */}
-            <Link href="#projects" className="inline-block">
+            {/* View My Work Button */}
+            <Link href="#projects" className="w-full sm:w-auto">
               <motion.button
                 whileHover={{ scale: 1.05, boxShadow: "0 4px 24px #2563eb33" }}
                 whileTap={{ scale: 0.97 }}
                 className="
-                  px-5 py-2.5
+                  w-full sm:w-auto
+                  px-5 py-2
                   bg-blue-600
                   text-white
                   rounded-lg
                   font-semibold
-                  shadow-md
+                  shadow
                   hover:bg-blue-700
                   transition-all
                   text-base
@@ -72,24 +73,21 @@ export default function Hero() {
                 View My Work
               </motion.button>
             </Link>
-            {/* Secondary Button */}
+            {/* Resume Button */}
             <a
               href="/KabirSethi_Resume.pdf"
               download
               className="
-                flex items-center gap-2
-                px-5 py-2.5
-                bg-transparent
-                dark:bg-neutral-800
-                border border-neutral-400
-                dark:border-neutral-700
-                text-neutral-900
-                dark:text-white
+                w-full sm:w-auto
+                flex items-center justify-center gap-2
+                px-5 py-2
+                bg-neutral-900 dark:bg-neutral-800
+                border border-neutral-700 dark:border-neutral-700
+                text-white
                 rounded-lg
                 font-semibold
-                shadow-md
-                hover:bg-neutral-100
-                dark:hover:bg-neutral-700
+                shadow
+                hover:bg-neutral-800 dark:hover:bg-neutral-700
                 transition-all
                 text-base
                 focus:outline-none focus:ring-2 focus:ring-blue-300
@@ -101,7 +99,7 @@ export default function Hero() {
           </div>
 
           {/* Social Links */}
-          <div className="flex gap-6 mt-8 justify-center md:justify-start">
+          <div className="flex gap-6 mt-8 mb-10 justify-center md:justify-start">
             <a
               href="https://github.com/KabirSethi6933782"
               target="_blank"
