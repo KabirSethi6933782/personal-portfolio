@@ -31,7 +31,7 @@ export default function AboutSection() {
 
       <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-10">
         Hi! I’m Kabir—a software developer with a background in computer science and business.<br /><br />
-        I’m passionate about building intuitive and efficient digital experiences, with strengths in cloud, full-stack dev, and automation.<br />
+        I’m passionate about building intuitive and efficient digital experiences, with strengths in cloud, full-stack dev, and cybersecurity.<br />
         I love learning new technologies and collaborating with creative teams!
       </p>
       {/* --- Tech Stack Marquee --- */}

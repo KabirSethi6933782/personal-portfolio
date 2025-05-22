@@ -27,7 +27,7 @@ export default function Home() {
   </svg>
 </div>
 
-      <section id="contact">
+      <section id="contact" className="mt-20">
         <ContactSection />
       </section>
     </main>
