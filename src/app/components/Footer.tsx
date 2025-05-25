@@ -77,7 +77,7 @@ export default function Footer() {
             </a>
           </div>
           <div>
-            <h3 className="text-xl font-semibold text-white mb-2">Letapos;s Connect</h3>
+            <h3 className="text-xl font-semibold text-white mb-2">Let's Connect</h3>
             <a
               href="#contact"
               className="flex items-center gap-2 bg-neutral-800/80 hover:bg-neutral-700 transition text-white font-medium px-5 py-3 rounded-lg w-max mx-auto md:mx-0"
