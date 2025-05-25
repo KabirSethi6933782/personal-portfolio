@@ -23,7 +23,7 @@ export default function SkillsMarquee() {
 
       {/* Marquee */}
       <Marquee gradient={false} speed={40}>
-        {skills.map((skill, idx) => (
+        {skills.map((skill) => (
           <div
             key={skill.name}
             className="flex flex-col items-center mx-10 min-w-[100px] opacity-80 hover:opacity-100 transition"

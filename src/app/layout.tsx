@@ -6,16 +6,6 @@ import Footer from "./components/Footer";
 import BackgroundBlobs from "./components/BackgroundBlobs";
 import { ThemeProvider } from "next-themes";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
   title: "Kabir Sethi | Portfolio",
   description: "Personal portfolio website for Kabir Sethi",

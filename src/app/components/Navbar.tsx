@@ -3,7 +3,6 @@
 import { useTheme } from "next-themes";
 import { FaMoon, FaSun, FaBars, FaTimes } from "react-icons/fa";
 import { useEffect, useState } from "react";
-import Link from "next/link";
 
 const links = [
   { href: "#about", label: "About" },
