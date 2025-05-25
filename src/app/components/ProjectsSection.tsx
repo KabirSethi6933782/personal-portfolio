@@ -136,6 +136,19 @@ export default function ProjectsSection() {
             </div>
           </motion.div>
         ))}
+
+        {/* VIEW MORE BUTTON */}
+        <div className="flex items-center justify-center col-span-1 md:col-span-2 mt-2">
+          <a
+            href="https://github.com/KabirSethi6933782?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-3 rounded-xl bg-blue-600 text-white font-semibold shadow-lg hover:bg-blue-700 transition text-lg"
+          >
+            <FaGithub className="text-xl" />
+            View More on GitHub
+          </a>
+        </div>
       </div>
     </motion.div>
   );
