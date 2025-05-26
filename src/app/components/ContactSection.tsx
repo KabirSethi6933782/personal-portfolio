@@ -25,7 +25,7 @@ const contacts = [
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="scroll-mt-24 px-4">
+    <section id="contact" className="scroll-mt-32 px-4">
       <motion.div
         initial={{ opacity: 0, y: 48 }}
         whileInView={{ opacity: 1, y: 0 }}
