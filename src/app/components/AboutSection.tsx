@@ -30,10 +30,11 @@ export default function AboutSection() {
       </motion.h2>
 
       <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-10">
-        Hi! I’m Kabir—a software developer with a background in computer science and business.<br /><br />
-        I’m passionate about building intuitive and efficient digital experiences, with strengths in cloud, full-stack dev, and cybersecurity.<br />
-        I love learning new technologies and collaborating with creative teams!
+        Hi, I am Kabir - With a degree in Computer Science and Business, I enjoy building software solutions that connect technology with real-world needs.<br /><br />
+        I have hands-on experience with Python, Java, JavaScript, and DevOps tools like Docker and Git, and have worked on projects using React, Node.js, and cloud platforms such as AWS and Azure.<br /><br />
+        My background in business and management helps me understand both technical and organizational goals. I’m eager to learn, collaborate, and contribute to a team where I can grow and help create impactful, scalable solutions.
       </p>
+
       {/* --- Tech Stack Marquee --- */}
       <SkillsMarquee />
     </motion.div>

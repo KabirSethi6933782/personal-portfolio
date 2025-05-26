@@ -45,7 +45,7 @@ export default function Hero() {
             />
           </h1>
           <p className="mt-4 text-lg md:text-xl text-neutral-700 dark:text-gray-300 font-medium max-w-xl mx-auto md:mx-0">
-            I’m a software developer with a passion for building smart, elegant, and efficient solutions.
+            I’m a computer science graduate with a passion for building smart, elegant, and efficient solutions.
           </p>
 
           {/* Action Buttons */}
@@ -73,10 +73,12 @@ export default function Hero() {
                 View My Work
               </motion.button>
             </Link>
-            {/* Resume Button */}
+
+            {/* Resume Button (opens in new tab) */}
             <a
               href="/KabirSethi_Resume.pdf"
-              download
+              target="_blank"
+              rel="noopener noreferrer"
               className="
                 w-full sm:w-auto
                 flex items-center justify-center gap-2
