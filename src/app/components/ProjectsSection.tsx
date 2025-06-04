@@ -12,7 +12,7 @@ const projects = [
     tech: ["Next.js", "Java", "Spring Boot", "OpenAI API", "PostgreSQL"],
     github: "https://github.com/KabirSethi6933782/ai-knowledge-hub",
     demo: "",
-    image: "/projects/",
+    image: "/projects/knowledge-hub.png",
   },
   {
     title: "AI-Powered Newsletter Generator",
