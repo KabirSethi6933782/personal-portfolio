@@ -4,6 +4,16 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import Image from "next/image";
 
 const projects = [
+    {
+    title: "AI Knowledge Hub",
+    tagline: "Personalized newsletters with AI, made easy.",
+    description:
+      "A full-stack internal document management system that uses AI to extract and summarize uploaded documents. Built with a Spring Boot backend and Next.js frontend. Includes Apache Tika for parsing and OpenAI API for summaries, stored in a PostgreSQL database.",
+    tech: ["Next.js", "Java", "Spring Boot", "OpenAI API", "PostgreSQL"],
+    github: "https://github.com/KabirSethi6933782/ai-knowledge-hub",
+    demo: "",
+    image: "/projects/",
+  },
   {
     title: "AI-Powered Newsletter Generator",
     tagline: "Personalized newsletters with AI, made easy.",
