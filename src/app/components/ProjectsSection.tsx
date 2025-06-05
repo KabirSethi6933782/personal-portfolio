@@ -95,13 +95,13 @@ export default function ProjectsSection() {
             className="bg-white/90 dark:bg-black/70 rounded-2xl shadow-xl p-6 md:p-8 border border-gray-300 dark:border-gray-700 hover:border-blue-600 transition group flex flex-col"
           >
             {/* Project Image */}
-            <div className="w-full h-48 mb-4 rounded-xl overflow-hidden bg-neutral-200 dark:bg-neutral-900 flex items-center justify-center">
+            <div className="w-full h-48 flex items-center justify-center mb-4 bg-transparent">
               <Image
                 src={project.image}
                 alt={project.title}
                 width={320}
                 height={192}
-                className="object-cover w-full h-full"
+                className="w-full h-48 object-contain rounded-lg mb-4 bg-white"
               />
             </div>
             {/* Project Info */}
