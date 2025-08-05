@@ -38,7 +38,7 @@ const projects = [
     title: "Second Chance Decor E-Commerce",
     tagline: "Online store for upcycled furniture.",
     description:
-      "Designed and built an accessible, responsive e-commerce site for Second Chance Decor as part of my CiviConnect team. Focused on seamless shopping and donation experience.",
+      "Designed and built an accessible, responsive e-commerce site for Second Chance Decor as part of my CiviConnect team.",
     tech: ["React", "Node.js", "SQL", "Figma"],
     github: "",
     demo: "https://www.secondchancedecor.ca",
